@@ -127,3 +127,36 @@ var num=257.562
 console.log(num.toFixed());
 var num=257.562
 console.log(num.toPrecision(2));
+
+
+REGEXP:
+var colorName=/Green/;
+re=new RegExp("Green");
+
+var s1="afdefed";
+var s2=new String("dsdvo");
+var mystring="fhkgdf";
+console.log(mystring.length);
+
+var txt="hey hello";
+console.log(txt.bold());
+console.log(txt.italics());
+var txt="hey hello"+txt.charAt(0);
+var txt="hey hello"+txt.charAt(5);
+
+txt="hey hello";
+txt1="welcome";
+txt2="to the java";
+txt3=txt.concat(txt1,txt2);
+console.log(txt3);
+
+var str="Brave new world";
+console.log(str.IndexOf("w"));
+console.log(str.lastIndexOf("Brave"));
+console.log(str.lastIndexOf("java"));
+
+var str="Brave new world";
+console.log(str.lastIndexOf("Brave new Brave"));
+
+
+
