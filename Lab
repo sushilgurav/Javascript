@@ -1,0 +1,121 @@
+var student=function(sname){
+	this.name=sname;
+};
+student.prototype.getName=function(){
+return this.name;
+};
+var david=new Student("David");
+console.log(david.getName());
+Student.prototype.newStudentName=function()
+{
+console.log('Hello,my name is'+this.getName());
+};
+david.newStudentName();
+
+
+var colors=[];
+colors[0]="White";
+colors[1]="Red";
+colors[2]="Green";
+console.log(colors[0]);
+console.log(colors[1]);
+console.log(colors[2]);
+
+var colors=["White","Red","Green"];
+console.log(colours.length);
+
+var myArray=new Array("x","y","z");
+myArray=myArray.concat("1","2","3");
+console.log(myArray);
+
+var myArray=new Array("x","y","z");
+myArray=myArray.join("-");
+console.log
+(myArray);
+VM180:4 x-y-z
+
+var myArray=new Array("a","b");
+console.log(myArray.push("c");
+
+var myArray=new Array("a","b","c");
+var last=myArray.pop();
+console.log(myArray);
+
+var myArray=new Array("a","b","c");
+var x=myArray.shift();
+console.log(myArray);
+
+var myArray=new Array("a","b","c");
+var x=myArray.unshift("d","e");
+console.log(myArray);
+
+var myArray=new Array("1","2","3","4","5");
+myArray=myArray.slice(1,4);
+console.log(myArray);
+
+var myArray=new Array("10","20","30","40","50");
+myArray.splice(1,3,"a","b","c","d");
+console.log(myArray);
+
+var myArray=new Array("a","b","c");
+myArray.reverse();
+console.log(myArray);
+
+var myArray=new Array("204","231","216");
+myArray.sort();
+console.log(myArray);
+
+var myArray=new Array("c","a","b");
+myArray.sort();
+console.log(myArray);
+
+holds boolean values
+var myBooleanObject=new Boolean(value);
+
+
+var myBooleanObject=new Boolean("True");
+
+var date=new Date();
+console.log(date);
+
+var date=new Date("August 15,1997 10:05:00");
+console.log(date);
+
+var date=new Date(97,8,15);
+console.log(date);
+
+var date=new Date(97,8,15,10,05,0);
+console.log(date);
+
+var date=new Date();
+console.log(getDate());
+
+date.getDate();
+date.getDay();
+date.getFullYear();
+
+date.getHours();
+date.Miliseconds();
+
+
+date.toDateString();
+date.toISOString();
+date.toJSON();date.toTimeString();
+date.toUTCString();
+date.valueOf();
+
+console.log(Math.atan2(0.50,0.50));
+console.log(Math.ceil(0.65));
+console.log(Math.atan(0.65));
+console.log(Math.cos(0));
+console.log(Math.exp(5));
+console.log(Math.floor(15.99));
+console.log(Math.log(2));
+console.log(Math.max(25,33));
+console.log(Math.min(25,33));
+console.log(Math.pow(2,4));
+console.log(Math.random());
+console.log(Math.round(22.45));
+console.log(biggest_Number);
+console.log(smallest_Number);
+console.log(infinite_Number);
