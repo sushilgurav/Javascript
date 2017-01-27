@@ -119,3 +119,11 @@ console.log(Math.round(22.45));
 console.log(biggest_Number);
 console.log(smallest_Number);
 console.log(infinite_Number);
+
+
+var num=257.562;
+console.log(num.toExponential());
+var num=257.562
+console.log(num.toFixed());
+var num=257.562
+console.log(num.toPrecision(2));
