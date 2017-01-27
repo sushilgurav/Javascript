@@ -1,0 +1,13 @@
+<html>
+<body>
+<script>
+var student=function(sname,usn,marks[]){
+	this.name=sname;
+  this.usn=susn;
+};
+student.prototype.getName=function(){
+return this.name;
+};
+</script>
+</body>
+</html>
