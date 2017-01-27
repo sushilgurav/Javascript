@@ -158,5 +158,27 @@ console.log(str.lastIndexOf("java"));
 var str="Brave new world";
 console.log(str.lastIndexOf("Brave new Brave"));
 
+str="abfmdwfgi";
+newArray=str.match(/d/gi);
+console.log(newArray);
 
+regex=/bown/gi;
+str1="The quick brown for the jumps over the lazzy dog";
+console.log("Searched word");
+console.log("New string:white");
 
+newRe=new RegExp('brown','g')
+str1="The quick brown for the jumps over the lazzy dog";
+ans=str1.search(newRe);
+if(ans==-1)
+{
+console.log("'brown' is not found in"+str1);
+}
+else
+{
+console.log("'brown' found in"+str1);
+}
+
+str1="The quick brown for the jumps over the lazzy dog";
+str2=str1.slice(3,9);
+console.log(str2);
