@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<HEAD>
+<TITLE>Test Input</TITLE>
+<SCRIPT LANGUAGE="JavaScript">
+
+function testResults (form) {
+    var TestVar = form.inputbox.value;
+    var USN= form.inputbox1.value;
+	
+	   a=parseFloat(form.inputbox2.value);
+	   b=parseFloat(form.inputbox3.value);
+           c=parseFloat(form.inputbox4.value);
+	   d=30;
+	   e=(a+b+c)/d;
+alert ("NAME: " + TestVar+"\nUSN: " + USN+"\nGPA:"+e);
+
+
+}
+</SCRIPT>
+
+<script type="text/javascript">
+function testResults1(form){
+var ck_name = /^[A-Za-z0-9 ]{12,12}$/;
+function validate(form){
+var name = form.inputbox5.value;
+
+ if (!ck_name.test(name)) {
+  alert ("wrong");
+
+ }
+}
+</script>
+<script type="text/javascript">
+var ck_name = /^[A-Za-z0-9]{3,20}$/;
+
+function validate(form){
+var name = form.name.value;
+  
+ var errors = [];
+ 
+ if (!ck_name.test(name)) {
+  errors[errors.length] = "You valid Name .";
+ }
+ 
+ if (errors.length > 0) {
+  reportErrors(errors);
+  return false;
+ }
+ 
+ return true;
+}
+
+function reportErrors(errors){
+ var msg = "Please Enter Valid USN...\n";
+
+ alert(msg);
+}
+</script>
+
+</HEAD>
+<body id="public">
+	<div style="height:30px"></div>
+
+<div id="container">
+
+<div style="height:30px"></div>
+
+<form autocomplete="off"
+	enctype="multipart/form-data" method="post" action="thanks.html" onSubmit="return validate(this);" name="form">
+<label class="desc" id="title1" for="Field1">Enter USN </label>
+	<div>
+		<input id="name" name="name" type="text" class="field text medium" value="" maxlength="255" tabindex="1" 						/>
+		</div>
+<input  type="submit" value="Check USN">
+
+	
+</ul>
+</form>
+
+</BODY>
+<BODY>
+<FORM NAME="myform" ACTION="" METHOD="GET">Enter something in the box: <BR><br>
+
+Enter Your Name<br><INPUT TYPE="text" NAME="inputbox" VALUE=""><P>
+
+Enter USN<br><INPUT TYPE="text" NAME="inputbox1" VALUE=""><P>
+
+Marks in Subject 1<br>
+<INPUT TYPE="text" NAME="inputbox2" VALUE=""><P>
+Marks in Subject 2<br>
+<INPUT TYPE="text" NAME="inputbox3" VALUE=""><P>
+Marks in Subject 3<br>
+<INPUT TYPE="text" NAME="inputbox4" VALUE=""><P>
+
+<INPUT TYPE="button" NAME="button" Value="Click" onClick="testResults(this.form)">
+
+</FORM>
+</BODY>
+</html>
