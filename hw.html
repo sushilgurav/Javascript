@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>Students</title>
+</head>
+
+<body>
+
+<form name="std">
+<form action="action_page.php">
+
+<fieldset>
+
+<legend style="font-size:130%";><b>Student Information:</b></legend>
+&nbsp;&nbsp;&nbsp;<b>NAME : </b>
+<input type="text" id="i1" name="Name">
+<br><br>
+&nbsp;&nbsp;&nbsp;<b>USN : </b>
+<input type="text" id="i2" name="USN">
+
+<br><br>
+&nbsp;&nbsp;&nbsp;<b>Enter Marks scored in all subjects : </b>
+<br><br>
+&nbsp;&nbsp;&nbsp;
+<input type="text" id="i3" name="sub1">
+&nbsp;
+<input type="text" id="i4" name="sub2">
+&nbsp;
+<input type="text" id="i5" name="sub3">
+&nbsp;
+<input type="text" id="i6" name="sub4">
+&nbsp;
+<input type="text" id="i7" name="sub5">
+<br><br>&nbsp;&nbsp;&nbsp;&nbsp;
+<input type="button" value="Submit" onclick="cgpa()">
+<br><br>
+&nbsp;
+<b>Result : </b><input type="text" name="total">
+
+<script  type="text/javascript">
+
+function valid(USN)
+{
+	var x=/01fe15bcs[0-9][0-9][0-9]/;
+	return(USN.match(x));
+}
+
+</script>
+
+<script  type="text/javascript">
+
+function cgpa()
+{
+	var USN=document.getElementById("i2").value;
+	if( valid(USN))
+	{
+	var a=document.getElementById("i3").value;
+	var b=document.getElementById("i4").value;
+	var c=document.getElementById("i5").value;
+	var d=document.getElementById("i6").value;
+	var e=document.getElementById("i7").value;
+	
+	
+	var res=parseFloat(+a + +b + +c + +d + +e)/50;
+	
+	document.std.total.value=res;
+	}
+	else
+	{
+		alert("Invalid Usn..(ex:01f15bcs_ _ _)\nPlease re-enter");
+	}	
+}
+</script>
+
+</fieldset>
+</form>
+</body>
+
+</html>
