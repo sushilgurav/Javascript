@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>Students</title>
+</head>
+
+<body background="1.jpg">
+
+<form name="std">
+<form action="action_page.php">
+
+<center><h1><b>Student Details:</b></h1></center>
+<center><img src="2.gif"><a href="http://www.animatedimages.org/cat-students-1571.htm">&nbsp;&nbsp;<img src="http://www.animatedimages.org/data/media/1571/animated-student-image-0055.gif" border="0" alt="animated-student-image-0055"/></a>&nbsp;&nbsp;&nbsp;<a href="http://www.animatedimages.org/cat-students-1571.htm">&nbsp;&nbsp;<img src="http://www.animatedimages.org/data/media/1571/animated-student-image-0039.gif" border="0" alt="animated-student-image-0039"/></a></center>
+<b>NAME : </b>
+<input type="text" id="name" name="Name">
+<br><br>
+<b>USN :&nbsp;&nbsp;&nbsp;&nbsp;</b>
+<input type="text" id="usn" name="USN" onblur="sam()">
+
+<script>
+var details=function (name,usn,m1,m2,m3,m4,m5) {
+    this.firstName =name;;
+    this.usn=usn;
+    this.m1=m1;
+    this.m2=m2;
+    this.m3=m3;
+    this.m4=m4;
+    this.m5=m5;
+};
+details.prototype.calCGP(){
+return (Number(m1)+Number(m2)+Number(m3)+Number(m4)+Number(m5))
+};
+</script>
+
+
+<br><br>
+<b>Enter Data: </b>
+<br><br>
+Enter marks in subject 1
+<input type="text" id="m1" name="sub1">
+<br><br>
+Enter marks in subject 2
+<input type="text" id="m2" name="sub2">
+<br><br>
+Enter marks in subject 3
+<input type="text" id="m3" name="sub3">
+<br><br>
+Enter marks in subject 4
+<input type="text" id="m4" name="sub4">
+<br><br>
+Enter marks in subject 5
+<input type="text" id="m5" name="sub5">
+<br><br>&nbsp;&nbsp;&nbsp;&nbsp;
+
+
+<input type="button" value="Submit" onclick="cgpa()">
+
+<br><br>
+&nbsp;
+<b>Result : </b><input type="text" name="total">
+
+<script  type="text/javascript">
+function valid(USN)
+{
+	var x=/01fe15bcs[0-9][0-9][0-9]/;
+	return(USN.match(x));
+}
+</script>
+
+<script  type="text/javascript">
+function cgpa()
+{
+
+	var a=document.getElementById("m1").value;
+	var b=document.getElementById("m2").value;
+	var c=document.getElementById("m3").value;
+	var d=document.getElementById("m4").value;
+	var e=document.getElementById("m5").value;
+	var res=parseFloat(+a +b + +c + +d +e)/50;
+	document.std.total.value=res;
+	var sushil= new details(a,b,c,d,e)
+	
+}
+function sam()
+{
+	var USN=document.getElementById("usn").value;
+	if( valid(USN))
+	{
+	
+	}
+	else
+	{
+		alert("INVALID!!!!!!!!(01f15bcs_ _ _)\n");
+	}	
+}
+</script>
+</fieldset>
+</form>
+</body>
+</html>
