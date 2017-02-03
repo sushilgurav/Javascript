@@ -29,7 +29,7 @@ var details=function (name,usn,m1,m2,m3,m4,m5) {
     this.m5=m5;
 };
 details.prototype.calCGP(){
-return (Number(m1)+Number(m2)+Number(m3)+Number(m4)+Number(m5))
+return ((Number(m1)+Number(m2)+Number(m3)+Number(m4)+Number(m5))/50);
 };
 </script>
 
@@ -58,7 +58,7 @@ Enter marks in subject 5
 
 <br><br>
 &nbsp;
-<b>Result : </b><input type="text" name="total">
+<b>Result : </b><input type="text" id="total">
 
 <script  type="text/javascript">
 function valid(USN)
@@ -77,8 +77,8 @@ function cgpa()
 	var c=document.getElementById("m3").value;
 	var d=document.getElementById("m4").value;
 	var e=document.getElementById("m5").value;
-	var res=parseFloat(+a +b + +c + +d +e)/50;
-	document.std.total.value=res;
+	var res=(Number(a)+Number(b)+Number(c)+Number(d)+Number(e))/50;
+	document.getElementById("total").value=res;
 	var sushil= new details(a,b,c,d,e)
 	
 }
