@@ -1,0 +1,147 @@
+<html>
+<head>
+<title>JOB PORTAL</title>
+</head>
+<body >
+<img align=left src="http://www.animatedimages.org/data/media/411/animated-work-image-0140.gif" border="0" alt="animated-work-image-0140"/> 
+<img align=right src="http://www.animatedimages.org/data/media/411/animated-work-image-0179.gif" border="0" alt="animated-work-image-0179"/>
+<b>
+<link rel="stylesheet" href="bootstrap.min.css">
+<fieldset>
+<h1><font color=RED><center>JOB PORTAL<center></font></h1>
+Name
+<input type="Text" id="name"><br><br>
+City &nbsp;&nbsp;
+<input type="Text" id="city"><br><br>
+State
+<input type="Text" id="state"><br><br>
+&nbsp;
+Enter Qualification<br>
+<br>
+<select id="ss">
+	<option>BA</option>
+	<option>MBA</option>
+	<option>MCA</option>
+	<option>Computer Engineering</option>
+	<option>Electrical engineering</option>
+	<option>Mechanical Engineering</option> 
+
+</select>
+
+<script>
+function check()
+{
+var element = document.getElementById("ss");
+var elementValue = element.value;
+if(elementValue=="MBA"){
+alert("Accountancy");
+  }
+else
+if(elementValue=="BA"){
+alert("Banking");
+  }
+else
+if(elementValue=="Computer Engineering"){
+alert("Software Engineering");
+  }
+else
+if(elementValue=="MCA"){
+alert("System Analyst");
+  }
+else
+if(elementValue=="Electrical Engineering"){
+alert("Field Service Engineer");
+  }
+else
+if(elementValue=="Mechanical Engineering"){
+alert("Design Engineer");
+  }
+}
+</script>
+
+
+<input type="Button" value="Check Job Avaliable" onclick=check()>
+
+<br><br>Enter Expected Salary<br>
+<input type="Number" id="salary"><br><br>
+
+Enter Work Experience<br>
+<input type="Number" id="expi"><br><br>
+
+
+<script>
+function check2(eid)
+{
+	var x=/[a-z][a-z][a-z][a-z]@gmail.com/;
+	return(eid.match(x))
+}
+</script>
+<script>
+function find()
+{
+	var eid=document.getElementById("i2").value;
+	if(check2(eid))
+	{
+		alert("Valid Email-ID");
+	}
+	else
+	{
+		alert("Invalid");
+	}	
+}
+</script>
+ 
+Enter Your email-id<br>
+<input type="Text" id="i2" onblur=find()>
+
+<br><br>
+Enter Your Phone Number<br>
+<input type="Number" id="i3" onblur=find2()><br>
+
+<script>
+function phone(no)
+{
+	var y=/[0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9]/;
+	return(no.match(y))
+}
+</script>
+<script>
+function find2()
+{
+	var no=document.getElementById("i3").value;
+	if(phone(no))
+	{
+		alert("Valid number");
+	}
+	else
+	{
+		alert("Invalid");
+	}	
+}
+</script>
+
+
+
+<script>
+function details()
+{
+	var name=document.getElementById("name").value;
+	var city=document.getElementById("city").value;
+	var state=document.getElementById("state").value;
+	var salary=document.getElementById("salary").value;
+	var expi=document.getElementById("expi").value;
+	var app=document.getElementById("ss").value;
+	var mail=document.getElementById("i2").value;
+	
+	
+	alert("Name:"+name+"  City:"+city+"    State:"+state+"    Expected Salary:"+salary+"   Experience:"+expi+"  Qualification:"+app+" Email:"+mail);
+	
+}
+</script><br>
+<input type="button" value="Submit" onclick=details()>
+
+</b>
+
+</body>
+
+</html>
