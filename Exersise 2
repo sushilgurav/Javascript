@@ -1,0 +1,98 @@
+<html>
+<head>
+<title>Hospital</title>
+<link rel="stylesheet" href="bootstrap.min.css">
+</head>
+<body>
+ <center><h2>Hospital Management</h2></center>
+<label for="Name">Name</label><input type="text" id="name" onblur="validatename()" class="form-control" onblur=validatename() placeholder="Name"><br><br>		
+<label for="Age">Age</label><input type="number" id="age" MAXLENGTH=2 class="form-control" onblur=validateage() placeholder="Age"><br><br>
+<label for="disease">Type of disease</label><input type="text" id="disease" MAXLENGTH=12 class="form-control" placeholder="Disease Type"><br><br>
+
+<label for="date">Enter Todays Date(in DDMMYY)</label><input type="number" id="date" class="form-control"  onblur=validatedate() placeholder="Date"><br><br>			
+<label for="doctor">Appointment Doctor Name</label><input type="text" id="appointment" onblur="validatedocname()" class="form-control" placeholder="Doctor"><br><br>			
+<script>
+function validatename(){
+	var x=document.getElementById("name").value;
+	if(x.length<3){
+		alert("Please enter valid Name:"+x.length);
+		return 0;
+	}
+	return 1;
+}
+
+function validateage(){
+	var x=document.getElementById("age").value;
+	if(x.length>3){
+		alert("Please enter valid age:"+x.length);
+		return 0;
+	}
+	return 1;
+}
+
+
+function validatedate(){
+	var x=document.getElementById("date").value;
+	if(x.length<9){
+		alert("Please enter valid Date:"+x.length);
+		return 0;
+	}
+	return 1;
+}
+function validatedocname(){
+	var x=document.getElementById("name").value;
+	if(x.length<3){
+		alert("Please enter valid Name:"+x.length);
+		return 0;
+	}
+	return 1;
+}
+var patient=function(name,age,disease,date,appointment){
+	this.name=name;
+	this.age=age;
+	this.disease=disease;
+	this.date=date;
+	this.appointment=appointment;
+};
+
+patient.prototype.disp=function(){
+	this.res=("Name:"+this.name+" Age:"+this.age+"  Type of disease:"+this.disease+"  Registration date:"+this.date+"  Doctor:"+this.appointment)
+	return (this.res);
+}
+
+var patient1=new patient("Ram",56,"abhb",02652017,"verma");
+var patient2=new patient("Sham",56,"abhb",02652017,"verma");
+var patient3=new patient("abc",56,"abhb",02652017,"verma");
+alert(patient1.disp());
+alert(patient2.disp());
+alert(patient3.disp());
+
+var arr=[patient1,patient2,patient3];
+var arrname=[patient1.name,patient2.name,patient3.name];
+var arrname2=[patient1.disease,patient2.disease,patient3.disease];
+
+alert("Number of patients");
+var i;
+for(i=0;i<arr.length;i++)
+{
+	var count=1+1;
+	count++;
+	alert(count);
+
+}
+var j;
+for(j=0;j<arr.length;i++)
+{
+	
+}
+
+</script>
+<input class="btn btn-success" type="button" id="submit" value="Submit" onClick=validateage()>			
+<input class="btn btn-reset" type="reset" id="reset" value="Reset" > 
+
+</form>
+</div>
+</body>
+</html>
+
+
